@@ -23,10 +23,7 @@ config :ps_liveview_pro, PsLiveviewProWeb.Endpoint,
   code_reloader: true,
   debug_errors: true,
   secret_key_base: "KM5gWuCszHG2bluNbPTvzsFEwrUdd+oZxYAYvp6QAwf1bO8/ThEcjeD5IEm+B3yg",
-  watchers: [
-    # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
-  ]
+  watchers: []
 
 # ## SSL Support
 #
