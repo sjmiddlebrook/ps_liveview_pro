@@ -10,7 +10,7 @@
             stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg x-show="open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          <svg x-cloak x-show="open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div x-show="open" class="sm:hidden" id="mobile-menu">
+  <div x-cloak x-show="open" class="sm:hidden" id="mobile-menu">
     <div class="pt-2 pb-4 space-y-1">
       <%= link("Home", to: "/", class: get_path_class(@conn, "/", true))  %>
       <%= link("Light", to: "/light", class: get_path_class(@conn, "/light", true))  %>
