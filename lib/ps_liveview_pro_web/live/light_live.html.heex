@@ -1,0 +1,48 @@
+<div class="max-w-xl mx-auto text-center space-y-8">
+  <h1 class="text-3xl font-bold text-sky-400">Front Light</h1>
+  <div class="flex h-12 overflow-hidden rounded-lg">
+    <span
+      class="transition-[2000ms] flex flex-col justify-center text-gray-700 text-center whitespace-nowrap bg-yellow-300 font-bold"
+      style={"width: #{@brightness}%"}>
+      <%= @brightness %>%
+    </span>
+  </div>
+
+  <div class="flex justify-between">
+    <button
+      class="py-2 px-4 rounded-lg transition ease-in-out duration-150 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={@brightness == 0}
+      phx-click="off">
+      <img class="w-8 h-8" src="images/light-off.svg">
+    </button>
+
+    <button
+      class="py-2 px-4 rounded-lg transition ease-in-out duration-150 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={@brightness == 0}
+      phx-click="down">
+      <img class="w-8 h-8" src="images/down.svg">
+    </button>
+
+    <button
+      class="py-2 px-4 rounded-lg transition ease-in-out duration-150 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={@brightness == 100}
+      phx-click="up">
+      <img class="w-8 h-8" src="images/up.svg">
+    </button>
+
+    <button
+      class="py-2 px-4 rounded-lg transition ease-in-out duration-150 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+      disabled={@brightness == 100}
+      phx-click="on">
+      <img class="w-8 h-8" src="images/light-on.svg">
+    </button>
+  </div>
+  <div>
+    <button
+      class="py-2 px-4 rounded-lg transition ease-in-out duration-150 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+      phx-click="random"
+    >
+      ⚡️ Random Brightness
+    </button>
+  </div>
+</div>
